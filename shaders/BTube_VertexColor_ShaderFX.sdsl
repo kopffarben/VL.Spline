@@ -1,0 +1,7 @@
+shader BTube_VertexColor_ShaderFX :   ShadingBase, BTube_Stream
+{
+    stage override float4 Shading()
+	{
+        return streams.OutCol*base.Shading();
+	}
+};

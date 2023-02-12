@@ -1,0 +1,42 @@
+shader BTube_StructVertex
+{
+    struct BTube_Struct
+    {
+        // The position attributes
+        float3 Pos0;                //   0
+        float3 Pos1;                //  12
+        float3 Pos2;                //  24 
+        float3 Pos3;                //  36
+
+        // The Up-Vector attributes
+        float3 Up0;                 //  48
+        float3 Up1;                 //  60
+        float3 Up2;                 //  72
+        float3 Up3;                 //  84
+
+        // The Width and Height attributes
+        float2 WH0;                 //  96
+        float2 WH1;                 // 108
+        float2 WH2;                 // 112
+        float2 WH3;                 // 120
+
+        // The Color attributes
+        float4 COL0;                // 128 
+        float4 COL1;                // 144
+        float4 COL2;                // 160
+        float4 COL3;                // 176
+
+        // The Caps  attributes
+        int    FrontCap: CP_FRONT;  // 192
+        int    EndCap  : CP_END;    // 196
+                                    // 200
+    };
+
+    static const uint BSStride = 200;
+
+    void SetBuffer(RWStructuredBuffer<BSplineStruct> outputBuffer, uint id, BSplineStruct value )
+    {
+        outputBuffer[id] = value;
+    }
+
+};
