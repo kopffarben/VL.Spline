@@ -15,7 +15,7 @@
         <Patch Id="FEAVhU54aPqQTKPyLrp3i9" IsGeneric="true">
           <Canvas Id="En5V4y2PhO5Pfl4boOX8cO" CanvasType="Group">
             <Node Bounds="799,774,165,19" Id="AwinvIfpTtnOJ1InPEjZ6u">
-              <p:NodeReference LastCategoryFullName="Stride.Models" LastDependency="VL.Stride.Engine.vl">
+              <p:NodeReference LastCategoryFullName="Stride.Models" LastDependency="VL.Stride.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="MeshEntity" />
               </p:NodeReference>
@@ -23,7 +23,7 @@
               <Pin Id="TKoaOcAr8XcO61lSBVYzQb" Name="Mesh" Kind="InputPin" />
               <Pin Id="GQ3ejkqDCKOQWFL0c4IljL" Name="Material" Kind="InputPin" />
               <Pin Id="GORF89qlSTILQ3tgzQZfmm" Name="Is Shadow Caster" Kind="InputPin" DefaultValue="True">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
               </Pin>
@@ -179,7 +179,7 @@
                 <Patch Id="DfjTX9SB1b3NO2j15RAGAW" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="NXyWjXrYYASMVQoHhAbkOc" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="1048,718,106,19" Id="CmBqfnRjP2fLg9OMUUzOQ1">
-                  <p:NodeReference LastCategoryFullName="Stride.Models.Meshes" LastDependency="VL.Stride.Rendering.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Models.Meshes" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="DynamicBufferMesh" />
                   </p:NodeReference>
@@ -192,7 +192,7 @@
                   <Pin Id="NiMWVlbbSWyO7hGtVpTTAE" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1048,680,94,19" Id="SaDK1p8IYeCPftbJiWnWNi">
-                  <p:NodeReference LastCategoryFullName="Stride.Buffers" LastDependency="VL.Stride.Graphics.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Buffers" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="VertexBufferView" />
                   </p:NodeReference>
@@ -201,7 +201,7 @@
                   <Pin Id="I39qB6kwHFwO5r1euoYsOm" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1067,555,80,26" Id="QD9LpSBzFiGMAhGUyaRXhh">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexDeclaration" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexDeclaration" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="VertexDeclaration" />
                     <Choice Kind="OperationCallFlag" Name="VertexStride" />
@@ -218,7 +218,7 @@
                   <Pin Id="JJiBNL85XO2MG4MeXEtPlU" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="956,621,85,19" Id="FD7rEvwa1ffPqJZlKGWy45">
-                  <p:NodeReference LastCategoryFullName="Stride.Buffers" LastDependency="VL.Stride.Graphics.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Buffers" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ComputeBuffer" />
                   </p:NodeReference>
@@ -230,7 +230,7 @@
                   <Pin Id="FGQ06dYqn0JOU5ZfXYzs7a" Name="Has Changed" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="821,840,165,19" Id="F6thlM3SD6QLxsAmfZyrKR">
-                  <p:NodeReference LastCategoryFullName="Stride.Rendering" LastDependency="VL.Stride.Engine.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Rendering" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="RenderEntity" />
                   </p:NodeReference>
@@ -246,7 +246,7 @@
                   <Pin Id="ByPQsgjGmj4OvBDudguGkv" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="756,677,109,19" Id="H0QMJhF3dZQOCTxGfVJgfa">
-                  <p:NodeReference LastCategoryFullName="Stride.Rendering.Utils" LastDependency="VL.Stride.Rendering.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Rendering.Utils" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="CalcDispatchArgs1D" />
                   </p:NodeReference>
@@ -264,7 +264,7 @@
                   <Pin Id="QQqwa5ZmvLgLpc9IquVzVT" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="880,500,80,26" Id="Eg4spBc6XUCMJuHN0IVQKW">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.Buffer" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.Buffer" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ElementCount" />
                   </p:NodeReference>
@@ -604,7 +604,7 @@
               </Patch>
             </Node>
             <Node Bounds="744,316,65,19" Id="VETg8oWSoYGNHAbcDMre2m">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -614,7 +614,7 @@
             </Node>
             <ControlPoint Id="P34YSYTVc01M3e0RNdUmcU" Bounds="1599,164" />
             <Node Bounds="744,380,45,19" Id="AqPSLZFpfloM0CVyk9AYFd">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
               </p:NodeReference>
@@ -626,7 +626,7 @@
             <ControlPoint Id="OoNPfquDNRzO7PwgUwdDyB" Bounds="868,-36" />
             <ControlPoint Id="DngeG1M0OQsNyPOsPCRHej" Bounds="889,-13" />
             <Node Bounds="764,346,65,19" Id="A1BEbM52ab2LjsSciqqIGN">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -674,6 +674,7 @@
             </Node>
             <ControlPoint Id="ME4QV6IZBGQNJ7h9xoBmMO" Bounds="1230,369" />
             <ControlPoint Id="TsNv51cAFqsNjWARlqEEqF" Bounds="1188,356" />
+            <ControlPoint Id="UByY0WcO3YTPOL0gB3YZfh" Bounds="1864,385" />
           </Canvas>
           <ProcessDefinition Id="BXvZQ67DaUvPrzqilU3qLZ">
             <Fragment Id="VQfxAWkWJHaMgmAqW4UQMh" Patch="AAumy5WCRaILO890O2V2IQ" Enabled="true" />
@@ -839,7 +840,10 @@
             <Pin Id="PGe42aJCFjBO2HsVGhnqUM" Name="Enabled" Kind="InputPin" Bounds="1025,1676" />
             <Pin Id="NeKLZemyL2wPR1k1xxq4DQ" Name="Bounding Box" Kind="InputPin" Bounds="1541,378" />
             <Pin Id="DWWIoTfRqOtOWzUtNZXvaW" Name="Entity" Kind="OutputPin" Bounds="807,1092" />
+            <Pin Id="JMYkQqzQ6UVMCfnCuGgNOH" Name="Render Group" Kind="InputPin" Bounds="1864,386" />
           </Patch>
+          <Link Id="I12er91CJHOOj1DdXCTpZO" Ids="UByY0WcO3YTPOL0gB3YZfh,Sg9Wr7VieVZOBMgSPXq27l" />
+          <Link Id="JZXKiJ2FKrfQLDMDmOAQqn" Ids="JMYkQqzQ6UVMCfnCuGgNOH,UByY0WcO3YTPOL0gB3YZfh" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -854,7 +858,7 @@
         <Patch Id="RuXPuyvXmsVMpIQMyEt6cg">
           <Canvas Id="LdZSaZX53vGPpcPyl7iUwx" CanvasType="Group">
             <Node Bounds="814,528,106,19" Id="KU6LxR8FGlGNLxWa0F1qfT">
-              <p:NodeReference LastCategoryFullName="Stride.Models.Meshes" LastDependency="VL.Stride.Rendering.vl">
+              <p:NodeReference LastCategoryFullName="Stride.Models.Meshes" LastDependency="VL.Stride.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="DynamicBufferMesh" />
               </p:NodeReference>
@@ -1149,7 +1153,7 @@
               </p:NodeReference>
               <Patch Id="VaAs4Wx3f6gNRpbmR7qWox">
                 <Node Bounds="713,322,68,26" Id="NtT6NLuo6gaL6NfWpQbOd5">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1176,7 +1180,7 @@
                 <Pin Id="Qv9W9UPOS0pMXPzpUpDuXS" Name="Output" Kind="OutputPin" Bounds="484,424" />
                 <Link Id="G4DA3W6ILwhN4TTqmub4vC" Ids="JGoIoW1ahhBNQXJ20UlpX2,Qv9W9UPOS0pMXPzpUpDuXS" IsHidden="true" />
                 <Node Bounds="625,246,64,26" Id="C7leM7ex5iuO49rDiycffI">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1185,7 +1189,7 @@
                   <Pin Id="TjRNK4gGdpTLH3bUAhUVJr" Name="Result" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,359,64,26" Id="OiiLJVrcsGwLuFJawjLQde">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1197,18 +1201,18 @@
                 </Node>
                 <Link Id="VGN3rjjcQgSPhoP7j2krFH" Ids="ODpSFBpLHgPOiTF4D8x3Hm,E8cBJWg5ueZQUqpmJlhkBT" />
                 <Pad Id="Ani8fzqSkRlLxkJtOBj8Rd" Comment="" Bounds="627,218,35,15" ShowValueBox="true" isIOBox="true" Value="18">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Integer32" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Pad Id="EtUh2Y7C5wgNsMLnKh4gOI" Comment="" Bounds="715,303,80,15" ShowValueBox="true" isIOBox="true" Value="CP_POS0">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Link Id="HFFzVhZ3mAwPn5a6X85dDx" Ids="EtUh2Y7C5wgNsMLnKh4gOI,GApQN8wjAr0QLmtWv2rSQR" />
                 <Node Bounds="713,397,68,26" Id="RS4Zs9UKwf9OxH2xmLGJhT">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1222,7 +1226,7 @@
                   <Pin Id="EfFH33d0ndWQXKhWtSdu3T" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,434,64,26" Id="AXCjk55NjqGQPTLFJ4OqGF">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1233,14 +1237,14 @@
                   <Pin Id="ObRkDXz9jzyModJ02raioi" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="H5eq1UNmQfkO8AG8joQmOL" Comment="" Bounds="715,379,80,15" ShowValueBox="true" isIOBox="true" Value="CP_POS1">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Link Id="QR0Ya04J0JPN43zBvJ53aA" Ids="EfFH33d0ndWQXKhWtSdu3T,RmHyts9vsCAP74ZYVlTnqV" />
                 <Link Id="DALtOPJFM8ENS8evgCGZim" Ids="H5eq1UNmQfkO8AG8joQmOL,LdXSCiKgTx6ONLr0V1c5lH" />
                 <Node Bounds="713,472,68,26" Id="KWhwlFfiLniPSGqIEYuGSe">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1254,7 +1258,7 @@
                   <Pin Id="BvBgkQjYXKRLueUYIxjjtQ" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,509,64,26" Id="GMUp3FM97klNAt6DVia7o4">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1265,14 +1269,14 @@
                   <Pin Id="BJv7b4vYx19LUqkxqMyL34" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="DVsZk4YWMkIMM22qQJez8x" Comment="" Bounds="715,454,80,15" ShowValueBox="true" isIOBox="true" Value="CP_POS2">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Link Id="GXnwb8eOUiLOticzai3jTo" Ids="BvBgkQjYXKRLueUYIxjjtQ,PHDjPu2OwpqM4sO9WBBJau" />
                 <Link Id="MBKUDTO6EX1PRtbS6Sc02H" Ids="DVsZk4YWMkIMM22qQJez8x,Cv2FQC9wsISOGQPWze1SOC" />
                 <Node Bounds="713,547,68,26" Id="H5ZoUILLevVOKt6oRTSpmD">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1286,7 +1290,7 @@
                   <Pin Id="FB4rzoTKLxjP5RpwEsGFho" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,584,64,26" Id="C42rVF8DbhYNxjrcTGXBMK">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1297,7 +1301,7 @@
                   <Pin Id="OBIoGx8o1nkLu7xqyENqj2" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="A9BDvOv6VeSOPRKyTilPmS" Comment="" Bounds="715,529,80,15" ShowValueBox="true" isIOBox="true" Value="CP_POS3">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1307,7 +1311,7 @@
                 <Link Id="Kz8818aozu1QCyrzggjvDC" Ids="ObRkDXz9jzyModJ02raioi,D3CpBiScONjQMveA170Rbl" />
                 <Link Id="IBuGaCJruZPO2wWd01bmlA" Ids="BJv7b4vYx19LUqkxqMyL34,NsPXoy0BhBTMbJv2Ro879l" />
                 <Node Bounds="713,682,68,26" Id="KgskCkmblyTQTvJjyGo8cP">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1321,7 +1325,7 @@
                   <Pin Id="GYLnUQdb71NQQt9E5YMb3Z" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,719,64,26" Id="FF95lBXmbpTOdrFGNutOTn">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1332,14 +1336,14 @@
                   <Pin Id="NehpqWV2fo7Lk7ltceBhkQ" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="NaTsI8ZGm9CLG3qxM73r6K" Comment="" Bounds="715,662,80,15" ShowValueBox="true" isIOBox="true" Value="CP_UP0">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Link Id="Q4sNKdUkY3RPZz6wjusGwa" Ids="GYLnUQdb71NQQt9E5YMb3Z,FiipNzJMuteNKvofe8Z8MG" />
                 <Link Id="V2WV8JBK4d7NENwVPOh73j" Ids="NaTsI8ZGm9CLG3qxM73r6K,NWfI1hsMUOZPkLEmEja11F" />
                 <Node Bounds="713,757,68,26" Id="SBODTZ8Pc7eQSs4126IfbR">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1353,7 +1357,7 @@
                   <Pin Id="Upk6iAujEk5PLHZwkEo5MQ" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,794,64,26" Id="L80WPLLd2FZLjsbK4QxYcx">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1364,7 +1368,7 @@
                   <Pin Id="KkAB7Od3emCQKmVNZt6ENO" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="P3ncM5EayE1ND4y4stWFMR" Comment="" Bounds="715,739,80,15" ShowValueBox="true" isIOBox="true" Value="CP_UP1">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1373,7 +1377,7 @@
                 <Link Id="I9P7bYQdYjcP1CokstSnPq" Ids="OBIoGx8o1nkLu7xqyENqj2,PnQXtAVXgWcOaxo8D69dPx" />
                 <Link Id="RkDz5r7NDCXPuZOUlM2hOT" Ids="NehpqWV2fo7Lk7ltceBhkQ,E8z9KZRX3h5LatRslOrLud" />
                 <Node Bounds="713,1027,68,26" Id="DWKBikjYuKsQXXtNHLyhJ9">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1387,7 +1391,7 @@
                   <Pin Id="Phyjnw9t5LQOyYc8eXIvPH" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1064,64,26" Id="Ftw9O25eiszQHYlKTmDtC3">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1398,12 +1402,12 @@
                   <Pin Id="UX0dDywvPSoL48EklmfZba" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="CUaBqt86GHyL8XZ4RgjSKR" Comment="" Bounds="715,1004,80,15" ShowValueBox="true" isIOBox="true" Value="CP_WH0">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="713,1102,68,26" Id="R9p7fDUPBKsMKkR44sZ091">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1417,7 +1421,7 @@
                   <Pin Id="T8xRyjrJbkYOiKfbLlSr3R" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1139,64,26" Id="ISTGumec1HFQAgFNJrCONI">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1428,7 +1432,7 @@
                   <Pin Id="NNJT1RTVxFqP0479UjGNyO" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="HKRdanMjzf3MaJYTaho80r" Comment="" Bounds="715,1084,80,15" ShowValueBox="true" isIOBox="true" Value="CP_WH1">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1438,7 +1442,7 @@
                 <Link Id="LIl5r3QIQxQMM0SpEuWDR5" Ids="HKRdanMjzf3MaJYTaho80r,Ogeb3oBYVzNPWuTF12Qle8" />
                 <Link Id="TkIaUlCY14cLroTf32Zqua" Ids="UX0dDywvPSoL48EklmfZba,A3Dlm8ESsF1LOI767rZhFc" />
                 <Node Bounds="713,1357,68,26" Id="AFU2ByoW20PP4ImhdaINgy">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1452,7 +1456,7 @@
                   <Pin Id="NRdXa4UMywHPgRmVi4z5hE" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1394,64,26" Id="L0tQJ7q0GNwLmUbTbXtwpj">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1463,12 +1467,12 @@
                   <Pin Id="Qknv36yRjdYMk0SmTwDCgo" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="RRljo4jv7uGP2ETOQS42y3" Comment="" Bounds="715,1339,80,15" ShowValueBox="true" isIOBox="true" Value="CP_COL0">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="713,1432,68,26" Id="Ab7pETmw83BPMaBvYSpo0d">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1482,7 +1486,7 @@
                   <Pin Id="EsE2EsFCXl8LgWahon4pJH" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1469,64,26" Id="OTdMiBIRgvGNOLoJ5KFeb5">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1493,7 +1497,7 @@
                   <Pin Id="Ufoc241JndfLdHw1LnoGSV" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="PXR2B838wRYNU8RT3WKpX7" Comment="" Bounds="715,1414,80,15" ShowValueBox="true" isIOBox="true" Value="CP_COL1">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1513,7 +1517,7 @@
                 <Link Id="KU1ZsIGF34fMIb1rebR7cA" Ids="KzdukT60FKtNTf71nsnq1Y,JdbyBKr8fpTN1y17pv5L07" />
                 <Link Id="VNZpzioZ4G6O9Eqzge1mne" Ids="KzdukT60FKtNTf71nsnq1Y,J92RTZxGxnYPpQcqTYXXTA" />
                 <Node Bounds="713,832,68,26" Id="IPDzw6QTSiULBq2hrsCYL6">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1527,7 +1531,7 @@
                   <Pin Id="MUFJi5k5LDPLJ7GEtAiOI9" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,869,64,26" Id="UtUfyjd08veN0Mg7mT5LBP">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1538,14 +1542,14 @@
                   <Pin Id="N2GkFCRRwpML86kHQpoTPF" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="BELEBiJ4n1KMtfzuw9993R" Comment="" Bounds="715,814,80,15" ShowValueBox="true" isIOBox="true" Value="CP_UP2">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Link Id="V1uvAnebeEoPWJMKeCzXev" Ids="MUFJi5k5LDPLJ7GEtAiOI9,GfpdsdLbgQtP8CEgZ7vpzU" />
                 <Link Id="MyFEhl0Npl0M4LRjlJoHI9" Ids="BELEBiJ4n1KMtfzuw9993R,QRWDcQnVmSQO8hp28eyoya" />
                 <Node Bounds="713,907,68,26" Id="Qbx6avSE2HkPxMYoe6OgYE">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1559,7 +1563,7 @@
                   <Pin Id="SzFHfupe6qPLN63sLsVVkd" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,944,64,26" Id="M5MyYyZ2dl7MUt8Ej5oRIz">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1570,7 +1574,7 @@
                   <Pin Id="LMX9SnIWuv6LRPffB6DmOD" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="SPl2W5HHcd8LI9zj6L64Av" Comment="" Bounds="715,889,80,15" ShowValueBox="true" isIOBox="true" Value="CP_UP3">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1586,7 +1590,7 @@
                 <Link Id="RHsFxE94IolP1hsiPO2eXX" Ids="M8kuQyvz5eBP2SygoeWadj,QFpwDKmqPnDLEUAJX0m5rE" />
                 <Link Id="POMZWEhRRMYLsJ5tckswpN" Ids="M8kuQyvz5eBP2SygoeWadj,C0uvscWTW6WNR5FFpzvvcC" />
                 <Node Bounds="713,1177,68,26" Id="KIdhoGXV7LrMwHSuijA6Tt">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1600,7 +1604,7 @@
                   <Pin Id="Ps9s06eJXOoO6SgWV7A5XN" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1214,64,26" Id="ETKQARGS0oVNhWhGKfUf9d">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1611,12 +1615,12 @@
                   <Pin Id="AKwrJbFPz63L8k1Poxy0m5" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="SpZvJK9iLcYMYnyFtDDhoJ" Comment="" Bounds="715,1159,80,15" ShowValueBox="true" isIOBox="true" Value="CP_WH2">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="713,1252,68,26" Id="G4E5TUBLmdyNPSNHYPyFwb">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1630,7 +1634,7 @@
                   <Pin Id="UBjqJvDKcrxM3u35VGQP7x" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1289,64,26" Id="EG8QxWBiG0SMV3K33yH2CJ">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1641,7 +1645,7 @@
                   <Pin Id="QlFQk3wslUXOsoMDej33pr" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="T6BXcteaG63PqVXgzsS0XK" Comment="" Bounds="715,1234,80,15" ShowValueBox="true" isIOBox="true" Value="CP_WH3">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1660,7 +1664,7 @@
                 <Link Id="IVqalaKKIwyOjgqhKFyHrE" Ids="NKUgt1aYmuEOydVEZJ2vRD,LH5yFdyZhgJMX58pHQJjC7" />
                 <Link Id="HXAEEafg64kLBymzHO2ZlV" Ids="NKUgt1aYmuEOydVEZJ2vRD,DiEf2V3n2gbPvWfhxhhrCC" />
                 <Node Bounds="713,1507,68,26" Id="QvDoN958XS9NZfAqaTglH6">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1674,7 +1678,7 @@
                   <Pin Id="T8L9ocV6kNMMAmOilsZA9h" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1544,64,26" Id="V3DrSWYVNQYQHti1o9uP0Z">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1685,12 +1689,12 @@
                   <Pin Id="VupTsHv8wHmNzJwAEHLTMV" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="O2gEWAqI2jUPHB7fuTx7E2" Comment="" Bounds="715,1489,80,15" ShowValueBox="true" isIOBox="true" Value="CP_COL2">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="713,1582,68,26" Id="MOYyXP7pm3QPWD4cA7Hk0c">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1704,7 +1708,7 @@
                   <Pin Id="C9KYqomA0rrN4NguIGJKIJ" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1619,64,26" Id="JpXJuIpaXdjQasMlgTgzKu">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1715,7 +1719,7 @@
                   <Pin Id="HWiZ7qDS0YIO0Gtv0kmbvk" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="QHlYPsZ3tewQT2LtOSqI19" Comment="" Bounds="715,1564,80,15" ShowValueBox="true" isIOBox="true" Value="CP_COL3">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1734,7 +1738,7 @@
                 <Link Id="HGOuHeOC5fRM2NOwiDzwPM" Ids="Qp2r1KIb3Z1PN1LoO7DuT5,FV5aBRY3JBFOidDRZeUvlN" />
                 <Link Id="KNmRRCmJkEgMnwg0OXtW9u" Ids="Qp2r1KIb3Z1PN1LoO7DuT5,L9S75XG5qNGMfsZRNai01h" />
                 <Node Bounds="713,1672,68,26" Id="R7av5LYpD0NNjFxnubqUNX">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1748,7 +1752,7 @@
                   <Pin Id="HODXPEm78tjMP1Xx25s2eo" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1709,64,26" Id="SzrSySrRp2gOMCWGp8tIhx">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1759,12 +1763,12 @@
                   <Pin Id="Kqzwv7rCbUEOJKoW7VEpq7" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="OgtlpLWWh0cLmIbc2kNyA3" Comment="" Bounds="715,1654,80,15" ShowValueBox="true" isIOBox="true" Value="CP_FRONT">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="713,1747,68,26" Id="DHGTXQLUj7oLZYozSUcsrc">
-                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.API.Graphics.VertexElement" LastDependency="VL.Stride.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="Category" Name="VertexElement" NeedsToBeDirectParent="true" />
@@ -1778,7 +1782,7 @@
                   <Pin Id="GG2oAeuR7X5NFEfN6hiWtF" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="625,1784,64,26" Id="HNBs2eRj4TZL8Gy60kDIQX">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetItem" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
@@ -1789,7 +1793,7 @@
                   <Pin Id="RjvvY1ibxFhQFkcLvuJfN7" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pad Id="APUBJOg1gB3O6U1Hc5Zcgt" Comment="" Bounds="715,1729,80,15" ShowValueBox="true" isIOBox="true" Value="CP_END">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                 </Pad>
@@ -1855,7 +1859,7 @@
     </Node>
   </Patch>
   <NugetDependency Id="FseP1ngvOXSN0GU93UzWnI" Location="VL.Stride" Version="2022.5.0-0582-g69e6cbc026" />
-  <NugetDependency Id="JfTGNVBvVkHMEu4EK1PPBJ" Location="VL.Fuse" Version="0.2.3" />
+  <NugetDependency Id="JfTGNVBvVkHMEu4EK1PPBJ" Location="VL.Fuse" Version="0.2.4" />
   <PlatformDependency Id="H3DK5gHOEYuMS5NMfhWong" Location="../../vvvv/vvvv_gamma_2022.5.0-0514-g836f9e21b4/Stride.Graphics.dll" />
   <PlatformDependency Id="UmT9eBVYEkQQSjlHm80kaM" Location="./lib/Release/net6.0/BTube_Struct.dll" />
 </Document>
