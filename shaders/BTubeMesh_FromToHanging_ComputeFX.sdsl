@@ -4,6 +4,7 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
 
     cbuffer PerDispatch
     {
+        stage StructuredBuffer<bool>   EdgeEnabledBuffer;
         stage StructuredBuffer<float3> FromBuffer;
         stage StructuredBuffer<float3> ToBuffer;
 
@@ -24,7 +25,7 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
         stage float3 Noise;
         stage bool   init             = false; 
         stage bool   useColorBuffer   = true;
-        stage bool   useComputeColor  = false; 
+        stage bool   useComputeColor  = false;  
         
 
         stage RWStructuredBuffer<BTube_Struct> bezierBuffer; 
@@ -34,119 +35,128 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
     {
         uint dtid = streams.DispatchThreadId.x;
 
-        uint formCount,toCount,formCCount,toCCount,dummy;
+        uint enabledCount,formCount,toCount,formCCount,toCCount,dummy;
+        EdgeEnabledBuffer.GetDimensions(enabledCount, dummy);
         FromBuffer.GetDimensions(formCount, dummy);
         ToBuffer.GetDimensions(toCount, dummy);
         FromColorBuffer.GetDimensions(formCCount, dummy);
         ToColorBuffer.GetDimensions(toCCount, dummy);
 
-        // Read Positon Buffers
-        float3 pos0 = FromBuffer[dtid%formCount];
-        float3 pos3 = ToBuffer[dtid%toCount]; 
-
-
-        // Buffer need to be inilized Up Vector not normalized
-        if (init || length(bezierBuffer[dtid].Up0) < 0.99)
+        if (!EdgeEnabledBuffer[dtid%enabledCount])
         {
             BTube_Struct btube = (BTube_Struct)0;
-            btube.Pos0 = pos0;
-            btube.Pos1 = ((pos3-pos0)/3) + pos0;
-            btube.Pos2 = ((pos0-pos3)/3) + pos3;
-            btube.Pos3 = pos3;
-
-            btube.Up0  = float3(0,1,0);
-            btube.Up1  = float3(0,1,0);
-            btube.Up2  = float3(0,1,0);
-            btube.Up3  = float3(0,1,0);
-
-            btube.WH0  = float2(1,0.1);
-            btube.WH1  = float2(0.1,0.1);
-            btube.WH2  = float2(0.1,0.1);
-            btube.WH3  = float2(0.1,0.1);
-
-            btube.COL0 = float4(1,1,1,1);
-            btube.COL1 = float4(1,1,1,1);
-            btube.COL2 = float4(1,1,1,1);
-            btube.COL3 = float4(1,1,1,1);
-
-            btube.FrontCap   = 1;
-            btube.EndCap     = 1;
             bezierBuffer[dtid] = btube;
-
         }
         else
         {
-            //if(dtid >= formCount || dtid >= toCount || formCount != toCount) return;
+            // Read Positon Buffers
+            float3 pos0 = FromBuffer[dtid%formCount];
+            float3 pos3 = ToBuffer[dtid%toCount]; 
 
-            // Read from Bezier Buffer
-            BTube_Struct btube = bezierBuffer[dtid];
 
-            
-            if (useComputeColor)
+            // Buffer need to be inilized Up Vector not normalized
+            if (init || length(bezierBuffer[dtid].Up0) < 0.99)
             {
-                streams.PositionWS = float4(pos0,1);
-                float4 color0 = colorFX.Compute();
-                streams.PositionWS = float4(pos3,1);
-                float4 color3 = colorFX.Compute(); 
+                BTube_Struct btube = (BTube_Struct)0;
+                btube.Pos0 = pos0;
+                btube.Pos1 = ((pos3-pos0)/3) + pos0;
+                btube.Pos2 = ((pos0-pos3)/3) + pos3;
+                btube.Pos3 = pos3;
 
-                btube.COL0 = color0;
-                btube.COL1 = ((color3-color0)/3) + color0;
-                btube.COL2 = ((color0-color3)/3) + color3;
-                btube.COL3 = color3;
-            }
-            else if (useColorBuffer && formCCount > 0 && toCCount > 0 &&  formCCount == toCCount)
-            {
-                
-                float4 col0 = FromColorBuffer[dtid%formCCount];
-                float4 col3 = ToColorBuffer[dtid%toCCount];
-                
-                //if (col0.x != btube.COL0.x  && col0.y != btube.COL0.y && col0.z != btube.COL0.z && col0.w != btube.COL0.w)
-                {
-                    btube.COL0 = col0;
-                    btube.COL1 = ((col3-col0)/3) + col0;
-                    btube.COL2 = ((col0-col3)/3) + col3;
-                    btube.COL3 = col3;
-                }
-            }
-            else
-            {
+                btube.Up0  = float3(0,1,0);
+                btube.Up1  = float3(0,1,0);
+                btube.Up2  = float3(0,1,0);
+                btube.Up3  = float3(0,1,0);
+
+                btube.WH0  = float2(1,0.1);
+                btube.WH1  = float2(0.1,0.1);
+                btube.WH2  = float2(0.1,0.1);
+                btube.WH3  = float2(0.1,0.1);
+
                 btube.COL0 = float4(1,1,1,1);
                 btube.COL1 = float4(1,1,1,1);
                 btube.COL2 = float4(1,1,1,1);
                 btube.COL3 = float4(1,1,1,1);
-            }
 
-            //if (btube.WH0.x != WH.x || btube.WH0.y != WH.y)
+                btube.FrontCap   = 1;
+                btube.EndCap     = 1;
+                bezierBuffer[dtid] = btube;
+
+            }
+            else
             {
-                btube.WH0  = WH0;
-                btube.WH1  = WH1;
-                btube.WH2  = WH2;
-                btube.WH3  = WH3;
+                //if(dtid >= formCount || dtid >= toCount || formCount != toCount) return;
+
+                // Read from Bezier Buffer
+                BTube_Struct btube = bezierBuffer[dtid];
+
+            
+                if (useComputeColor)
+                {
+                    streams.PositionWS = float4(pos0,1);
+                    float4 color0 = colorFX.Compute();
+                    streams.PositionWS = float4(pos3,1);
+                    float4 color3 = colorFX.Compute(); 
+
+                    btube.COL0 = color0;
+                    btube.COL1 = ((color3-color0)/3) + color0;
+                    btube.COL2 = ((color0-color3)/3) + color3;
+                    btube.COL3 = color3;
+                }
+                else if (useColorBuffer && formCCount > 0 && toCCount > 0 &&  formCCount == toCCount)
+                {
+                
+                    float4 col0 = FromColorBuffer[dtid%formCCount];
+                    float4 col3 = ToColorBuffer[dtid%toCCount];
+                
+                    //if (col0.x != btube.COL0.x  && col0.y != btube.COL0.y && col0.z != btube.COL0.z && col0.w != btube.COL0.w)
+                    {
+                        btube.COL0 = col0;
+                        btube.COL1 = ((col3-col0)/3) + col0;
+                        btube.COL2 = ((col0-col3)/3) + col3;
+                        btube.COL3 = col3;
+                    }
+                }
+                else
+                {
+                    btube.COL0 = float4(1,1,1,1);
+                    btube.COL1 = float4(1,1,1,1);
+                    btube.COL2 = float4(1,1,1,1);
+                    btube.COL3 = float4(1,1,1,1);
+                }
+
+                //if (btube.WH0.x != WH.x || btube.WH0.y != WH.y)
+                {
+                    btube.WH0  = WH0;
+                    btube.WH1  = WH1;
+                    btube.WH2  = WH2;
+                    btube.WH3  = WH3;
+                }
+
+                // Calculate inbetween vertical displacments
+                float HDist = length(pos0.xz - pos3.xz);
+                float VDist = length(pos0.y  - pos3.y);
+                float grav  = lerp(0,HDist,clamp(VDist/max(Vmax,0.1),0.1,1) ) + lerp(0,VDist,clamp(HDist/max(HMax,0.1),0,1));
+                    grav  = lerp(grav,MaxDisplacement,clamp(grav/max(MaxDisplacement,0.1),0,1));
+
+                // calculate Inbetween CPs
+                float3 pos1 = ((pos3-pos0)/3) + pos0 + float3(0,-grav,0);
+                float3 pos2 = ((pos0-pos3)/3) + pos3 + float3(0,-grav,0);
+
+
+                pos1 = pos1 + perlinDFV(pos1,time)*Noise;
+                pos2 = pos2 + perlinDFV(pos2,time)*Noise;
+
+
+                btube.Pos0 = pos0;
+                btube.Pos1 = (pos1-btube.Pos1)*Drag + btube.Pos1;
+                btube.Pos2 = (pos2-btube.Pos2)*Drag + btube.Pos2;;
+                btube.Pos3 = pos3;
+
+                // Write back to Bezier Buffer
+                bezierBuffer[dtid] = btube;
+
             }
-
-            // Calculate inbetween vertical displacments
-            float HDist = length(pos0.xz - pos3.xz);
-            float VDist = length(pos0.y  - pos3.y);
-            float grav  = lerp(0,HDist,clamp(VDist/max(Vmax,0.1),0.1,1) ) + lerp(0,VDist,clamp(HDist/max(HMax,0.1),0,1));
-                grav  = lerp(grav,MaxDisplacement,clamp(grav/max(MaxDisplacement,0.1),0,1));
-
-            // calculate Inbetween CPs
-            float3 pos1 = ((pos3-pos0)/3) + pos0 + float3(0,-grav,0);
-            float3 pos2 = ((pos0-pos3)/3) + pos3 + float3(0,-grav,0);
-
-
-            pos1 = pos1 + perlinDFV(pos1,time)*Noise;
-            pos2 = pos2 + perlinDFV(pos2,time)*Noise;
-
-
-            btube.Pos0 = pos0;
-            btube.Pos1 = (pos1-btube.Pos1)*Drag + btube.Pos1;
-            btube.Pos2 = (pos2-btube.Pos2)*Drag + btube.Pos2;;
-            btube.Pos3 = pos3;
-
-            // Write back to Bezier Buffer
-            bezierBuffer[dtid] = btube;
-
         }
     }
 };

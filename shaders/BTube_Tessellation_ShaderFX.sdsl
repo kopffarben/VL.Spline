@@ -55,17 +55,31 @@ shader BTube_Tessellation_ShaderFX :   ShaderBase, TransformationBase, BTube_Mat
 
     void HSConstantMain(InputPatch<Input, InputControlPointCount> input, const OutputPatch<Input2, OutputControlPointCount> output, out Constants constants) 
     {
-        float len   =   output[0].TessCap * output[0].FrontCap + 
-                        min(64-(2*output[0].TessCap),max(2,output[0].TessLength)) + 
-                        output[0].TessCap * output[0].EndCap;
+        if (length(input[0].Up0) != 0)
+        {
+            float len   =   output[0].TessCap * output[0].FrontCap + 
+                            min(64-(2*output[0].TessCap),max(2,output[0].TessLength)) + 
+                            output[0].TessCap * output[0].EndCap;
 
-        float width = max(1,output[0].TessWidth );
-        constants.tessFactor[0] = len;
-        constants.tessFactor[1] = width;
-        constants.tessFactor[2] = len;
-        constants.tessFactor[3] = width;
-        constants.insideTessFactor[0] = width;
-        constants.insideTessFactor[1] = len;
+            float width = max(1,output[0].TessWidth );
+            constants.tessFactor[0] = len;
+            constants.tessFactor[1] = width;
+            constants.tessFactor[2] = len;
+            constants.tessFactor[3] = width;
+            constants.insideTessFactor[0] = width;
+            constants.insideTessFactor[1] = len;
+        }
+        else
+        {
+            constants.tessFactor[0] = 0;
+            constants.tessFactor[1] = 0;
+            constants.tessFactor[2] = 0;
+            constants.tessFactor[3] = 0;
+            constants.insideTessFactor[0] = 0;
+            constants.insideTessFactor[1] = 0;
+        }
+
+        
     }
     
     [domain("quad")]

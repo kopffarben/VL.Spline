@@ -34,7 +34,7 @@ shader BTube_StructVertex
 
     static const uint BSStride = 200;
 
-    void SetBuffer(RWStructuredBuffer<BSplineStruct> outputBuffer, uint id, BSplineStruct value )
+    void SetBuffer(RWStructuredBuffer<BTube_Struct> outputBuffer, uint id, BTube_Struct value )
     {
         outputBuffer[id] = value;
     }
