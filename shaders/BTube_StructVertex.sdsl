@@ -3,36 +3,39 @@ shader BTube_StructVertex
     struct BTube_Struct
     {
         // The position attributes
-        float3 Pos0;                //   0
-        float3 Pos1;                //  12
-        float3 Pos2;                //  24 
-        float3 Pos3;                //  36
+        float3 Pos0    : CP_POS0;   //   0
+        float3 Pos1    : CP_POS1;   //  12
+        float3 Pos2    : CP_POS2;   //  24 
+        float3 Pos3    : CP_POS3;   //  36
 
         // The Up-Vector attributes
-        float3 Up0;                 //  48
-        float3 Up1;                 //  60
-        float3 Up2;                 //  72
-        float3 Up3;                 //  84
+        float3 Up0      : CP_UP0;   //  48
+        float3 Up1      : CP_UP1;   //  60
+        float3 Up2      : CP_UP1;   //  72
+        float3 Up3      : CP_UP3;   //  84
 
         // The Width and Height attributes
-        float2 WH0;                 //  96
-        float2 WH1;                 // 108
-        float2 WH2;                 // 112
-        float2 WH3;                 // 120
+        float2 WH0      : CP_WH0;   //  96
+        float2 WH1      : CP_WH1;   // 108
+        float2 WH2      : CP_WH2;   // 112
+        float2 WH3      : CP_WH3;   // 120
 
         // The Color attributes
-        float4 COL0;                // 128 
-        float4 COL1;                // 144
-        float4 COL2;                // 160
-        float4 COL3;                // 176
+        float4 COL0     : CP_COL0;  // 128 
+        float4 COL1     : CP_COL1;  // 144
+        float4 COL2     : CP_COL2;  // 160
+        float4 COL3     : CP_COL3;  // 176
 
         // The Caps  attributes
-        int    FrontCap: CP_FRONT;  // 192
-        int    EndCap  : CP_END;    // 196
-                                    // 200
+        int    FrontCap : CP_FRONT;  // 192
+        int    EndCap   : CP_END;    // 196
+
+        int   Enabled  : CP_ENABLED ;//200
+        int   Selected : CP_SELECTED;//204
+                                     // 208
     };
 
-    static const uint BSStride = 200;
+    static const uint BSStride = 208;
 
     void SetBuffer(RWStructuredBuffer<BTube_Struct> outputBuffer, uint id, BTube_Struct value )
     {

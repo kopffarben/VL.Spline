@@ -40,7 +40,10 @@ shader BTube_Stream :  IStreamInitializer
 
     // The Caps  attributes
     stage stream int    FrontCap: CP_FRONT;
-    stage stream int    EndCap  : CP_END;  
+    stage stream int    EndCap  : CP_END; 
+    
+    stage stream int    Enabled : CP_ENABLED ;
+    stage stream int    Selected: CP_SELECTED;
 
     override void ResetStream()
     {

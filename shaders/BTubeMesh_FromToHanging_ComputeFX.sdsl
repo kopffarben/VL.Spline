@@ -5,6 +5,7 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
     cbuffer PerDispatch
     {
         stage StructuredBuffer<bool>   EdgeEnabledBuffer;
+        stage StructuredBuffer<bool>   EdgeSelectedBuffer;
         stage StructuredBuffer<float3> FromBuffer;
         stage StructuredBuffer<float3> ToBuffer;
 
@@ -35,8 +36,9 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
     {
         uint dtid = streams.DispatchThreadId.x;
 
-        uint enabledCount,formCount,toCount,formCCount,toCCount,dummy;
+        uint enabledCount,selectedCount,formCount,toCount,formCCount,toCCount,dummy;
         EdgeEnabledBuffer.GetDimensions(enabledCount, dummy);
+        EdgeSelectedBuffer.GetDimensions(selectedCount, dummy);
         FromBuffer.GetDimensions(formCount, dummy);
         ToBuffer.GetDimensions(toCount, dummy);
         FromColorBuffer.GetDimensions(formCCount, dummy);
@@ -45,6 +47,9 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
         if (!EdgeEnabledBuffer[dtid%enabledCount])
         {
             BTube_Struct btube = (BTube_Struct)0;
+            btube.Enabled      = false;
+            btube.Selected   = EdgeSelectedBuffer[dtid%selectedCount];
+
             bezierBuffer[dtid] = btube;
         }
         else
@@ -80,6 +85,10 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
 
                 btube.FrontCap   = 1;
                 btube.EndCap     = 1;
+
+                btube.Enabled    = true;
+                btube.Selected   = EdgeSelectedBuffer[dtid%selectedCount] ? 1 : 0;
+
                 bezierBuffer[dtid] = btube;
 
             }
@@ -152,6 +161,13 @@ shader BTubeMesh_FromToHanging_ComputeFX : ComputeShaderBase, PositionStream4, T
                 btube.Pos1 = (pos1-btube.Pos1)*Drag + btube.Pos1;
                 btube.Pos2 = (pos2-btube.Pos2)*Drag + btube.Pos2;;
                 btube.Pos3 = pos3;
+
+                 
+                btube.FrontCap   = 1;
+                btube.EndCap     = 1;
+
+                btube.Enabled    = 1;
+                btube.Selected   = EdgeSelectedBuffer[dtid%selectedCount] ? 1 : 0;
 
                 // Write back to Bezier Buffer
                 bezierBuffer[dtid] = btube;

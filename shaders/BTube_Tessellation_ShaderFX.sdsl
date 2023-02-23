@@ -55,7 +55,7 @@ shader BTube_Tessellation_ShaderFX :   ShaderBase, TransformationBase, BTube_Mat
 
     void HSConstantMain(InputPatch<Input, InputControlPointCount> input, const OutputPatch<Input2, OutputControlPointCount> output, out Constants constants) 
     {
-        if (length(input[0].Up0) != 0)
+        if (length(input[0].Enabled) != 0)
         {
             float len   =   output[0].TessCap * output[0].FrontCap + 
                             min(64-(2*output[0].TessCap),max(2,output[0].TessLength)) + 
@@ -114,6 +114,11 @@ shader BTube_Tessellation_ShaderFX :   ShaderBase, TransformationBase, BTube_Mat
 		float3 binormal	=	normalize(cross( up, tangent ));
 		float3 normal	=	normalize(cross( tangent, binormal ));
 		float2 wh 		=	input[0].WH0 * m0 + input[0].WH1 * m1 + input[0].WH2 * m2 + input[0].WH3 * m3;
+        if (!input[0].Selected)
+        {
+            wh *= .1;
+        }
+
 		float3 circle   =   input[0].TubeWidth * (
                                 (normal*wh.y*cos(angle) + normalize(cross(normal,tangent))*wh.x*sin(angle)) * cos(capangle) +
                                 tangent*max(wh.x,wh.y)*sin(capangle)
@@ -125,6 +130,11 @@ shader BTube_Tessellation_ShaderFX :   ShaderBase, TransformationBase, BTube_Mat
         streams.TexCoord   = float2(uv.x,t);
 
         streams.OutCol = input[0].COL0 * m0 + input[0].COL1 * m1 + input[0].COL2 * m2 + input[0].COL3 * m3;
+        if (!input[0].Selected)
+        {
+            streams.OutCol = float4(((streams.OutCol.xyz - 1) * .3 + 1) * .3 ,streams.OutCol.w);
+        }
+        
 
         this.BaseTransformDS();
 
