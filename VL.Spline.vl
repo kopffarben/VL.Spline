@@ -52,16 +52,22 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessNode" Name="BTube (Tessellation)" />
               </p:NodeReference>
-              <Pin Id="KBUWpJdxsJDMTwA4CrJKab" Name="Length" Kind="InputPin" />
-              <Pin Id="FikY5iRKnk6L9bg7vcyBV0" Name="Width" Kind="InputPin" />
-              <Pin Id="KDted4VErdjMBSj5NVHpNE" Name="Cap" Kind="InputPin" />
-              <Pin Id="Hit83uiGrj2MdCdNXQ5qAj" Name="Ribbon" Kind="InputPin" />
-              <Pin Id="JIirhyTFGjpOX170aSUjyX" Name="Global Width" Kind="InputPin" />
+              <Pin Id="Vqa6UXyoUlINFDXs2A12AI" Name="Length" Kind="InputPin" />
+              <Pin Id="JwdSPGemsYRNtROTwvpiCY" Name="Width" Kind="InputPin" />
+              <Pin Id="NSbjg4jOgrlLWmtvgIOJdl" Name="Cap" Kind="InputPin" />
+              <Pin Id="MhOyMBWPNBOPYZKwR3LaRA" Name="Ribbon" Kind="InputPin" />
+              <Pin Id="MhSzsDkec7XLsPQdGfMNol" Name="Global Width" Kind="InputPin" />
+              <Pin Id="Ke1Vs6vPso0QQD2bSbbhr5" Name="Seletion Size" Kind="InputPin" />
+              <Pin Id="EdoRxwWWl6xOwZYHD1bpCT" Name="Seletion Saturation" Kind="InputPin" />
+              <Pin Id="AYOWX7RgvleOA2j7GieVav" Name="Seletion Value" Kind="InputPin" />
               <Pin Id="FTxhetvQqkXMVOQtsr2hCt" Name="BTube_Tessellation_ShaderFX Length" Kind="InputPin" />
               <Pin Id="GiHeOng5Q2cNgXd3sbD8J8" Name="BTube_Tessellation_ShaderFX Width" Kind="InputPin" />
               <Pin Id="AMOpdHg3qzjLrEsnNdP53x" Name="BTube_Tessellation_ShaderFX Cap" Kind="InputPin" />
               <Pin Id="JFKj23MdQpfOjDaT847yBS" Name="BTube_Tessellation_ShaderFX Ribbon" Kind="InputPin" />
               <Pin Id="A0Yznjz4rRzQCLtw22EeW7" Name="BTube_Tessellation_ShaderFX Global Width" Kind="InputPin" />
+              <Pin Id="Sdq4vvgPRrvPMOFg0qLp3Q" Name="BTube_Tessellation_ShaderFX Seletion Size" Kind="InputPin" />
+              <Pin Id="A3Eu4l6fPUsPIiqwyYna3w" Name="BTube_Tessellation_ShaderFX Seletion Saturation" Kind="InputPin" />
+              <Pin Id="Hn9JkPqODisLhMWMSnap86" Name="BTube_Tessellation_ShaderFX Seletion Value" Kind="InputPin" />
               <Pin Id="HhZdOFXgqkVOPNiogKxjo2" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="1086,475,18,19" Id="JBPFIRmHutaNmX4wVD8Ahg">
@@ -99,6 +105,9 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
+            <ControlPoint Id="VYMfVzKTgJ0NYJXIPKIV5r" Bounds="1410,479" />
+            <ControlPoint Id="DuXTlL7wQzkMfdBJ84P78m" Bounds="1433,506" />
+            <ControlPoint Id="KqAuwysW3v1OCwC57Rknk6" Bounds="1453,524" />
           </Canvas>
           <ProcessDefinition Id="FnZTYSqgxfgL738yX6lOg7">
             <Fragment Id="Hs2lRuHvJdfPI1rUYyweva" Patch="JsQXdyqFGh8M3tBUDnpvOE" Enabled="true" />
@@ -129,6 +138,9 @@
             <Pin Id="Jvkr6y8vdkUL82GnhmgDLf" Name="GlobalWidth" Kind="InputPin" Bounds="1342,460" />
             <Pin Id="TAiQIMTuEYvNdu3m9mWXql" Name="Enabled" Kind="InputPin" Bounds="1090,774" />
             <Pin Id="NYGnZbmSEY7QQqMdKqDC2E" Name="Entity" Kind="OutputPin" Bounds="1105,809" />
+            <Pin Id="QOEKj1l2nH1MDHbhY2dhPq" Name="Seletion Size" Kind="InputPin" Bounds="1408,481" />
+            <Pin Id="DcGJVpN3Py0O46ivZf82nC" Name="Seletion Saturation" Kind="InputPin" Bounds="1434,504" />
+            <Pin Id="OaPEm7l6dyZOr64P285Nrn" Name="Seletion Value" Kind="InputPin" Bounds="1465,531" />
           </Patch>
           <Link Id="TqjgohZNZ5RMr4qLYk8y02" Ids="TwoXXigJSJdLkwmpTcl6eJ,PbsgPOj0nhiMBuJs5KOLcR" />
           <Link Id="OAvNXvCvrv2OnOKeXBKimO" Ids="Mmxa4WDiXfLQCVyCV5qNS4,TwoXXigJSJdLkwmpTcl6eJ" IsHidden="true" />
@@ -153,6 +165,15 @@
           <Link Id="UGK9S316fNNN8ZYHkLYmNi" Ids="RTS6wqb0C7mMrKsPvTS5CO,G0uJKJD0bOEPojojxGgohg" />
           <Link Id="Cpcy5PcgTgUN5Ihb1dqi62" Ids="QbU8FBsmAGmOuzJvbmcka5,VeZtRQgrRfcQBoo9PCKwAo" />
           <Link Id="ECOXY7BvKzPOLoP3zsMpLX" Ids="HhZdOFXgqkVOPNiogKxjo2,OvR4KsGQ3CMLNddkpb846g" />
+          <Link Id="R3W3a9KhLlqOkrFQqm8WMU" Ids="VYMfVzKTgJ0NYJXIPKIV5r,Sdq4vvgPRrvPMOFg0qLp3Q" />
+          <Link Id="LtsxGfOqdNFOmF7jRQf35Z" Ids="QOEKj1l2nH1MDHbhY2dhPq,VYMfVzKTgJ0NYJXIPKIV5r" IsHidden="true" />
+          <Link Id="Gf3fFnMWLVYMyIk43KevP5" Ids="DuXTlL7wQzkMfdBJ84P78m,A3Eu4l6fPUsPIiqwyYna3w" />
+          <Link Id="H42Owkwc1kbNHnjfztWr6R" Ids="DcGJVpN3Py0O46ivZf82nC,DuXTlL7wQzkMfdBJ84P78m" IsHidden="true" />
+          <Link Id="HL9sLZCk90ULahafq5zf3A" Ids="KqAuwysW3v1OCwC57Rknk6,Hn9JkPqODisLhMWMSnap86" />
+          <Link Id="HteQH42CZodQXr8C2BnQ2V" Ids="OaPEm7l6dyZOr64P285Nrn,KqAuwysW3v1OCwC57Rknk6" IsHidden="true" />
+          <Link Id="FJJTxN8rZq1N1TMW63DdJz" Ids="VYMfVzKTgJ0NYJXIPKIV5r,Ke1Vs6vPso0QQD2bSbbhr5" />
+          <Link Id="IfLack6mZILLqUfXYIElN4" Ids="DuXTlL7wQzkMfdBJ84P78m,EdoRxwWWl6xOwZYHD1bpCT" />
+          <Link Id="Sf2hZv1M2r5Nl8UvO10IOj" Ids="KqAuwysW3v1OCwC57Rknk6,AYOWX7RgvleOA2j7GieVav" />
         </Patch>
       </Node>
       <!--
@@ -290,6 +311,9 @@
                   <Pin Id="U5UBmNHZua1PegYJWLKwAf" Name="Ribbon" Kind="InputPin" />
                   <Pin Id="DPotUFDBYgfPkUpzpEJIwY" Name="GlobalWidth" Kind="InputPin" />
                   <Pin Id="EL725AcWXGpN8wujjCFo4U" Name="Enabled" Kind="InputPin" />
+                  <Pin Id="CXkDj8jNKW9LEQbTII8ydk" Name="Seletion Size" Kind="InputPin" />
+                  <Pin Id="JWXedM8ajlOPTD3XvNzfe2" Name="Seletion Saturation" Kind="InputPin" />
+                  <Pin Id="JnN8HXYdhupOTElvhEDez5" Name="Seletion Value" Kind="InputPin" />
                   <Pin Id="RWZJhSGHQJ4L0YA10g4Pcf" Name="Entity" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="803,976,85,19" Id="RuDbiJQ7i4tLJQPM4q2erf">
@@ -615,7 +639,7 @@
               <Pin Id="NnldYzwMHBnL3wSVnKsH8e" Name="Result" Kind="OutputPin" />
               <Pin Id="IFn1ipz1IHQLS9wqqKwK7d" Name="Not Assigned" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="P34YSYTVc01M3e0RNdUmcU" Bounds="1599,164" />
+            <ControlPoint Id="P34YSYTVc01M3e0RNdUmcU" Bounds="1599,149" />
             <Node Bounds="744,380,45,19" Id="AqPSLZFpfloM0CVyk9AYFd">
               <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -638,17 +662,17 @@
               <Pin Id="APW83kJe8CCLdENxWDc8fG" Name="Result" Kind="OutputPin" />
               <Pin Id="ERFZux0201zP4YZZbKTMJu" Name="Not Assigned" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="KckxFjlwSLpQTfgWyss8j5" Bounds="1400,178" />
-            <ControlPoint Id="O2sV3oEBC45QbjSNf1vINm" Bounds="1421,201" />
-            <ControlPoint Id="MYod9u1HDp5Md7SRTTQyUS" Bounds="1438,229" />
-            <ControlPoint Id="OHYwoGNo5ruPUPZqAmpb0t" Bounds="1457,249" />
-            <ControlPoint Id="NKHeTp33YKrL9YJY2bufDr" Bounds="1474,272" />
-            <ControlPoint Id="Asbk9k1AzzVMwqwIETBJiH" Bounds="1501,300" />
-            <ControlPoint Id="OFGqn0EDUKiOkr4Tjax1d8" Bounds="1518,328" />
-            <ControlPoint Id="RrgOCd4xJyyMW0zj6LDQKL" Bounds="1536,358" />
-            <ControlPoint Id="GlYieOd043sQGpij8AB6kJ" Bounds="1558,380" />
-            <ControlPoint Id="TVI22oOFoewPXUdFUDZqKZ" Bounds="1579,412" />
-            <ControlPoint Id="SxzJRuNpKKpLFoRFtw2guQ" Bounds="1354,147" />
+            <ControlPoint Id="KckxFjlwSLpQTfgWyss8j5" Bounds="1400,163" />
+            <ControlPoint Id="O2sV3oEBC45QbjSNf1vINm" Bounds="1421,186" />
+            <ControlPoint Id="MYod9u1HDp5Md7SRTTQyUS" Bounds="1438,214" />
+            <ControlPoint Id="OHYwoGNo5ruPUPZqAmpb0t" Bounds="1457,234" />
+            <ControlPoint Id="NKHeTp33YKrL9YJY2bufDr" Bounds="1474,257" />
+            <ControlPoint Id="Asbk9k1AzzVMwqwIETBJiH" Bounds="1501,285" />
+            <ControlPoint Id="OFGqn0EDUKiOkr4Tjax1d8" Bounds="1518,313" />
+            <ControlPoint Id="RrgOCd4xJyyMW0zj6LDQKL" Bounds="1536,343" />
+            <ControlPoint Id="GlYieOd043sQGpij8AB6kJ" Bounds="1558,365" />
+            <ControlPoint Id="TVI22oOFoewPXUdFUDZqKZ" Bounds="1579,397" />
+            <ControlPoint Id="SxzJRuNpKKpLFoRFtw2guQ" Bounds="1354,132" />
             <ControlPoint Id="M0c3c0nmivcPs0oTFitJSu" Bounds="784,1579" />
             <ControlPoint Id="H27Brupc5h3Mkpb5EOUxMm" Bounds="954,59" />
             <ControlPoint Id="VjmZHxU2PaJMVxoRILkfrM" Bounds="977,84" />
@@ -689,6 +713,9 @@
               <Pin Id="LefkdqJ1sTXQURMhVRjTJQ" Name="Not Assigned" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="Nnn7RbWx9x8NFACmXIcyXT" Bounds="826,-56" />
+            <ControlPoint Id="DqfvdF6R36oLNEmAR0BuCN" Bounds="1632,423" />
+            <ControlPoint Id="AF2A7H53npKMPukeAAaHxt" Bounds="1649,442" />
+            <ControlPoint Id="Gf2NpktAh0fLc3egLwqZHK" Bounds="1665,462" />
           </Canvas>
           <ProcessDefinition Id="BXvZQ67DaUvPrzqilU3qLZ">
             <Fragment Id="VQfxAWkWJHaMgmAqW4UQMh" Patch="AAumy5WCRaILO890O2V2IQ" Enabled="true" />
@@ -828,6 +855,12 @@
           <Link Id="ANUaGbauqNxL1HcdQbg6sC" Ids="VGOvyf5g2wjM0RhqatL71E,BUdVDUpDorHOUqljOcf2th" />
           <Link Id="LCNqHA2nXQcP7mrbYsmmOq" Ids="Nnn7RbWx9x8NFACmXIcyXT,P3rZCtAV4XcOVgibnRNdNg" />
           <Link Id="IWjJA3cKIhfNA7262Qjbdn" Ids="JkuW8Ejz3NoLKHueLd6gmQ,Nnn7RbWx9x8NFACmXIcyXT" IsHidden="true" />
+          <Link Id="RU1i3QWbmFqMualjuoAnzd" Ids="DqfvdF6R36oLNEmAR0BuCN,CXkDj8jNKW9LEQbTII8ydk" />
+          <Link Id="HpFj5YMZYuJLseOhVAgWPh" Ids="Ba8ZfPqGsT1LpP4V7RFSAJ,DqfvdF6R36oLNEmAR0BuCN" IsHidden="true" />
+          <Link Id="VddAjj5ZlSuNC3Y0paDGak" Ids="AF2A7H53npKMPukeAAaHxt,JWXedM8ajlOPTD3XvNzfe2" />
+          <Link Id="IaQv9gUYkKNP7dRwZJI3ID" Ids="HE3yDXGTB4KOMTNIB5LbuG,AF2A7H53npKMPukeAAaHxt" IsHidden="true" />
+          <Link Id="TGaKjj8JRuAOjMgSROYaFo" Ids="Gf2NpktAh0fLc3egLwqZHK,JnN8HXYdhupOTElvhEDez5" />
+          <Link Id="SgNO6O6aytJPuWVzDZmoPD" Ids="OzsudG8SOvCLGruqhAWu6O,Gf2NpktAh0fLc3egLwqZHK" IsHidden="true" />
           <Patch Id="AAumy5WCRaILO890O2V2IQ" Name="Create" />
           <Patch Id="CSNUHhlD08TMfWkuiiSrsq" Name="Update">
             <Pin Id="Hwf4Z3bVOPLLAXgSAG30lx" Name="Edge Enabled Buffer" Kind="InputPin" Bounds="834,-60" />
@@ -862,6 +895,9 @@
             <Pin Id="U1hnexp4IexLPmUHymQ3Tw" Name="Ribbon" Kind="InputPin" Bounds="1393,379" />
             <Pin Id="E9Exhl4gh6WLnvdqEHvwpC" Name="GlobalWidth" Kind="InputPin" Bounds="1414,412" />
             <Pin Id="PGe42aJCFjBO2HsVGhnqUM" Name="Enabled" Kind="InputPin" Bounds="1025,1676" />
+            <Pin Id="Ba8ZfPqGsT1LpP4V7RFSAJ" Name="Seletion Size" Kind="InputPin" Bounds="1631,438" />
+            <Pin Id="HE3yDXGTB4KOMTNIB5LbuG" Name="Seletion Saturation" Kind="InputPin" Bounds="1649,451" />
+            <Pin Id="OzsudG8SOvCLGruqhAWu6O" Name="Seletion Value" Kind="InputPin" Bounds="1665,462" />
             <Pin Id="NeKLZemyL2wPR1k1xxq4DQ" Name="Bounding Box" Kind="InputPin" Bounds="1541,378" />
             <Pin Id="JMYkQqzQ6UVMCfnCuGgNOH" Name="Render Group" Kind="InputPin" Bounds="1864,386" />
             <Pin Id="DWWIoTfRqOtOWzUtNZXvaW" Name="Entity" Kind="OutputPin" Bounds="807,1092" />

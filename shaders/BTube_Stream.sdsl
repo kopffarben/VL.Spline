@@ -3,12 +3,17 @@
 /// </summary>
 shader BTube_Stream :  IStreamInitializer
 {
-    // The tesselation atribute 
+    // The tesselation attributes 
     stage stream int    TessLength  = 16;
     stage stream int    TessWidth   = 8;
     stage stream int    TessCap     = 1;
     stage stream int    TessRibbon  = 0;
     stage stream float  TubeWidth   = 1;
+
+    // Selection attributes
+    stage stream float  SeletionSize        = .1;
+    stage stream float  SeletionSaturation  = .3;
+    stage stream float  SeletionValue       = .3;
 
     //
     stage stream float4 OutCol  : COLOR;
