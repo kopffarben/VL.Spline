@@ -1,3 +1,4 @@
+
 /src/VL.ShaderFXtension/.idea/
 /src/VL.ShaderFXtension/.vs/
 /src/VL.ShaderFXtension/bin/
@@ -371,3 +372,7 @@ MigrationBackup/
 FodyWeavers.xsd
 /tests/
 *.dll
+
+
+# exception to the rule
+!lib/**
