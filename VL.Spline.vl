@@ -689,16 +689,6 @@
             <ControlPoint Id="C8e7AySPu0TMpaTrfsQV1k" Bounds="1072,210" />
             <ControlPoint Id="RGUcg0HJttIQFuPYy9WFQI" Bounds="1083,228" />
             <ControlPoint Id="CnbtGV0eJB6OgJSgmfHtfD" Bounds="1160,331" />
-            <Node Bounds="1260,536,70,19" Id="NBHQDwpGkS9OOtNx4hCjje">
-              <p:NodeReference LastCategoryFullName="Fuse.Core.StrideIntegration" LastDependency="VL.Fuse.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="ToShaderFX" />
-              </p:NodeReference>
-              <Pin Id="UL9fdmsGXu9QUqzVhmeaFR" Name="GpuValue" Kind="InputPin" />
-              <Pin Id="CRPiVPOruPFNIqWMfvuliJ" Name="Output" Kind="OutputPin" />
-              <Pin Id="VwRgNWyJgBwLyhYrlcKKBl" Name="Original Shader Source" Kind="OutputPin" />
-              <Pin Id="HyHr34tm2vtNq5tSIWoh3p" Name="Shader Code" Kind="OutputPin" />
-            </Node>
             <ControlPoint Id="ME4QV6IZBGQNJ7h9xoBmMO" Bounds="1230,369" />
             <ControlPoint Id="TsNv51cAFqsNjWARlqEEqF" Bounds="1188,356" />
             <ControlPoint Id="UByY0WcO3YTPOL0gB3YZfh" Bounds="1864,385" />
@@ -838,8 +828,6 @@
           <Link Id="IlFGntFS8KIN179iW8D4Vv" Ids="RGUcg0HJttIQFuPYy9WFQI,Hgjm30EZl1iOMy6C7mBkDn" />
           <Link Id="JYQI5yKAaJVPgsmRlXGA7G" Ids="UPm3i9ffaGMMietFTEmLbe,RGUcg0HJttIQFuPYy9WFQI" IsHidden="true" />
           <Link Id="MFifEz9gDRqOU1o494FQ2G" Ids="H4lEyOtscTQNtsC9uv3Vk1,CnbtGV0eJB6OgJSgmfHtfD" IsHidden="true" />
-          <Link Id="ODpI0bJYSW0LgmRQ5qCJAc" Ids="CRPiVPOruPFNIqWMfvuliJ,CaOtPGiHDkdPVwsymBD3jy" />
-          <Link Id="FbIVBzwI4aAMsn7LpjWEVP" Ids="CnbtGV0eJB6OgJSgmfHtfD,UL9fdmsGXu9QUqzVhmeaFR" />
           <Link Id="GYebBxXSEwVLnP2Buliy7U" Ids="ME4QV6IZBGQNJ7h9xoBmMO,IIhZ31gtRT3LY2apxfABp8" />
           <Link Id="RYNHcIv594jNsHKChMPJ1d" Ids="C4ruKPlJ3LgOvR8qe5jX0n,ME4QV6IZBGQNJ7h9xoBmMO" IsHidden="true" />
           <Link Id="ERDkBtpdA98OIi9R05kzvJ" Ids="TsNv51cAFqsNjWARlqEEqF,KMlFgxZ0riSOZpSJhZvAtb" />
@@ -902,6 +890,7 @@
             <Pin Id="JMYkQqzQ6UVMCfnCuGgNOH" Name="Render Group" Kind="InputPin" Bounds="1864,386" />
             <Pin Id="DWWIoTfRqOtOWzUtNZXvaW" Name="Entity" Kind="OutputPin" Bounds="807,1092" />
           </Patch>
+          <Link Id="LttuU0xFPGzPuKZB8ACfqt" Ids="CnbtGV0eJB6OgJSgmfHtfD,CaOtPGiHDkdPVwsymBD3jy" />
         </Patch>
       </Node>
       <!--
@@ -1990,7 +1979,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="FseP1ngvOXSN0GU93UzWnI" Location="VL.Stride" Version="2022.5.0-0582-g69e6cbc026" />
-  <NugetDependency Id="JfTGNVBvVkHMEu4EK1PPBJ" Location="VL.Fuse" Version="0.2.4" />
   <PlatformDependency Id="H3DK5gHOEYuMS5NMfhWong" Location="../../vvvv/vvvv_gamma_2022.5.0-0514-g836f9e21b4/Stride.Graphics.dll" />
   <PlatformDependency Id="UmT9eBVYEkQQSjlHm80kaM" Location="./lib/Release/net6.0/BTube_Struct.dll" />
 </Document>
